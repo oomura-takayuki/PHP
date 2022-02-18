@@ -11,7 +11,7 @@
     <?php
     //外部ファイル読み込み
     require 'utils.php';
-    //一覧表示画面か詳細表示画面で削除ボタン押下した際の削除処理
+    //一覧表示画面or詳細表示画面で削除ボタン押下した際の削除処理
     $delete_id = filter_input(INPUT_POST, 'delete_id');
     if (empty($_POST["delete_id"]) == false) {
         utl_delete($delete_id);

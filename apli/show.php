@@ -18,7 +18,7 @@
         $user = 'root';
         $password = 'takayuki07';
         $dbh  = utl_db_connect($dsn, $user, $password);
-        //挿入する値は空のまま、SQL実行の準備をする
+        //挿入する値は空のままSQL実行の準備をする
         $sql =  $dbh->prepare('SELECT id, task_contents, created_date, updated_date FROM tasks WHERE id = ?');
         // バインド変数を利用
         $sql->bindValue(1, $id, PDO::PARAM_INT);  //

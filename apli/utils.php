@@ -1,4 +1,4 @@
-<!-- 削除ボタン押下時の確認ダイアログ表示 -->
+<!-- 削除ボタン押下時の確認ダイアログ表示  -->
 <script>
         function delete_confirm() {
                 let result = confirm('本当に削除してよろしいですか？');

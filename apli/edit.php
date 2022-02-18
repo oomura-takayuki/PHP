@@ -20,7 +20,7 @@
     $user = 'root';
     $password = 'takayuki07';
     $dbh  = utl_db_connect($dsn, $user, $password);
-    //task_contentsの初期値をDBから取得
+    //task_contents初期値をDBから取得
 
     //挿入する値は空のまま、SQL実行の準備をする
     $sql =  $dbh->prepare('SELECT task_contents FROM tasks WHERE id = ?');

@@ -8,7 +8,7 @@
 
 <body>
 <h1>新規登録</h1><br>
-            ※id、登録日時は自動採番<br>
+            ※idは自動採番<br>
     <?php
     //外部ファイル読み込み
     require 'utils.php';
