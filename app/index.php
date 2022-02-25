@@ -11,13 +11,6 @@
     <?php
     //外部ファイル読み込み
     require 'utils.php';
-    //削除時のPOST値を取得
-    $delete_id = filter_input(INPUT_POST, 'delete_id');
-    //一覧表示画面か詳細表示画面で削除ボタン押下時のみ処理
-    if (empty($_POST["delete_id"]) == false) {
-        //削除処理
-        utl_delete($delete_id);
-    }
     //タスク一覧情報取得処理
     $stmt = utl_select();
     while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -32,7 +25,7 @@
                 <input type="submit" name="btn1" value="詳細">
             </form>
             <!-- 削除ボタン-->
-            <form method="POST" action=<?php echo $_SERVER['PHP_SELF']; ?> onsubmit="return delete_confirm()">
+            <form method="POST" action= "delete.php" onsubmit="return delete_confirm()">
                 <input type="hidden" name="delete_id" value=<?php echo $id ?>>
                 <input type="submit" name="button1" value="削除" /><br>
             </form>

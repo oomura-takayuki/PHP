@@ -24,7 +24,7 @@
         ?>
         <div style="display:inline-flex">
                 <!-- 削除ボタン-->
-                <form method="POST" action=index.php onsubmit="return delete_confirm()">
+                <form method="POST" action=delete.php onsubmit="return delete_confirm()">
                         <input type="hidden" name="delete_id" value=<?php echo $id ?>>
                         <input type="submit" name="button1" value="削除" /><br>
                 </form>

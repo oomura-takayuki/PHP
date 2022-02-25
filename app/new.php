@@ -13,20 +13,11 @@
     //外部ファイル読み込み
     require 'utils.php';
     ?>
-    <!-- 登録ボタン -->
-    <div style="display:inline-flex">
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-            タスク内容:<input type="text" name="task_contents" required /><br>
-            <input type="submit" name="button1" value="登録" /><br>
-            <?php
-            //登録ボタン押下時のみ処理
-            if (empty($_POST["task_contents"]) == false) {
-                utl_insert($_POST["task_contents"]);
-                print "入力内容を新規に登録しました<br>";
-            }
-            ?>
-        </form>
-    </div>
+    <!-- 登録ボタン onsubmit属性を付与してregister_alert関数を実行する -->
+    <form method="POST" action="create.php" onsubmit="return register_alert()">
+        タスク内容:<input type="text" name="task_contents" required /><br>
+        <input type="submit" name="button1" value="登録" /><br>
+    </form>
     <!-- 一覧表示画面遷移ボタン -->
     <form method="GET" action="index.php">
         <input type="submit" name="btn1" value="一覧表示画面へ戻る">

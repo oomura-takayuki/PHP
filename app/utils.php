@@ -1,5 +1,10 @@
-<!-- 削除ボタン押下時の確認ダイアログ表示 -->
 <script>
+        // 登録ボタン押下時のアラート表示用関数
+        function register_alert() {
+                let result = alert("入力内容を新規登録しました");
+                return result;
+        }
+        // 削除ボタン押下時の確認ダイアログ表示用関数
         function delete_confirm() {
                 let result = confirm('本当に削除してよろしいですか？');
                 return result;
@@ -36,8 +41,6 @@ function utl_select($id = "")
                 //sql実行結果を返却する
                 return $stmt;
         } else {
-                //DB接続
-                $dbh  = utl_db_connect();
                 //挿入する値は空のまま、SQL実行の準備をする
                 $sql =  $dbh->prepare('SELECT id, task_contents, created_date, updated_date FROM tasks WHERE id = ?');
                 //バインド変数を利用
