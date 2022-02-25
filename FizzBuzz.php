@@ -6,7 +6,7 @@
     <title>FizzBuzz問題</title>
 </head>
 <p>FizzBuzz問題<br>
-    繰り返し処理まで完了後に実施<br>
+    繰り返し処理まで完了後に実施 <br>
     以下の仕様を満たすようにphpファイルを作成してください<br>
 
     仕様<br>
